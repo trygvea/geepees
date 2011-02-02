@@ -30,6 +30,13 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="positionDevice.description.label" default="Description" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "description")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="positionDevice.idExternal.label" default="Id External" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "idExternal")}</td>

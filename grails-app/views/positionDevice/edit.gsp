@@ -33,6 +33,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                  <label for="description"><g:message code="positionDevice.description.label" default="Description" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: positionDeviceInstance, field: 'description', 'errors')}">
+                                    <g:textField name="description" value="${positionDeviceInstance?.description}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                   <label for="idExternal"><g:message code="positionDevice.idExternal.label" default="Id External" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: positionDeviceInstance, field: 'idExternal', 'errors')}">

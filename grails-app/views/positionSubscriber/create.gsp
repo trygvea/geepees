@@ -30,6 +30,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="name"><g:message code="positionSubscriber.name.label" default="Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: positionSubscriberInstance, field: 'name', 'errors')}">
+                                    <g:textField name="name" value="${positionSubscriberInstance?.name}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="receiveNow"><g:message code="positionSubscriber.receiveNow.label" default="Receive Now" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: positionSubscriberInstance, field: 'receiveNow', 'errors')}">

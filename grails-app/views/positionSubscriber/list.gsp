@@ -24,6 +24,8 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'positionSubscriber.id.label', default: 'Id')}" />
                         
+                            <g:sortableColumn property="name" title="${message(code: 'positionSubscriber.name.label', default: 'Name')}" />
+                        
                             <g:sortableColumn property="receiveNow" title="${message(code: 'positionSubscriber.receiveNow.label', default: 'Receive Now')}" />
                         
                             <g:sortableColumn property="receiveOnUrl" title="${message(code: 'positionSubscriber.receiveOnUrl.label', default: 'Receive On Url')}" />
@@ -35,6 +37,8 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${positionSubscriberInstance.id}">${fieldValue(bean: positionSubscriberInstance, field: "id")}</g:link></td>
+                        
+                            <td>${fieldValue(bean: positionSubscriberInstance, field: "name")}</td>
                         
                             <td><g:formatBoolean boolean="${positionSubscriberInstance.receiveNow}" /></td>
                         
