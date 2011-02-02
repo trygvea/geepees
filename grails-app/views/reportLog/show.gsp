@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
-        <g:set var="entityName" value="${message(code: 'positionDevice.label', default: 'PositionDevice')}" />
+        <g:set var="entityName" value="${message(code: 'reportLog.label', default: 'ReportLog')}" />
         <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
@@ -23,44 +23,30 @@
                     <tbody>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.id.label" default="Id" /></td>
+                            <td valign="top" class="name"><g:message code="reportLog.id.label" default="Id" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.description.label" default="Description" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "description")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: reportLogInstance, field: "id")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.currentLongitude.label" default="Current Longitude" /></td>
+                            <td valign="top" class="name"><g:message code="reportLog.subscriber.label" default="Subscriber" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "currentLongitude")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.currentLatitude.label" default="Current Latitude" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "currentLatitude")}</td>
+                            <td valign="top" class="value"><g:link controller="positionSubscriber" action="show" id="${reportLogInstance?.subscriber?.id}">${reportLogInstance?.subscriber?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.idExternal.label" default="Id External" /></td>
+                            <td valign="top" class="name"><g:message code="reportLog.what.label" default="What" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: positionDeviceInstance, field: "idExternal")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: reportLogInstance, field: "what")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="positionDevice.owner.label" default="Owner" /></td>
+                            <td valign="top" class="name"><g:message code="reportLog.when.label" default="When" /></td>
                             
-                            <td valign="top" class="value"><g:link controller="positionSubscriber" action="show" id="${positionDeviceInstance?.owner?.id}">${positionDeviceInstance?.owner?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value"><g:formatDate date="${reportLogInstance?.when}" /></td>
                             
                         </tr>
                     
@@ -69,7 +55,7 @@
             </div>
             <div class="buttons">
                 <g:form>
-                    <g:hiddenField name="id" value="${positionDeviceInstance?.id}" />
+                    <g:hiddenField name="id" value="${reportLogInstance?.id}" />
                     <span class="button"><g:actionSubmit class="edit" action="edit" value="${message(code: 'default.button.edit.label', default: 'Edit')}" /></span>
                     <span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
                 </g:form>

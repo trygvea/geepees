@@ -26,6 +26,10 @@
                         
                             <g:sortableColumn property="description" title="${message(code: 'positionDevice.description.label', default: 'Description')}" />
                         
+                            <g:sortableColumn property="currentLongitude" title="${message(code: 'positionDevice.currentLongitude.label', default: 'Current Longitude')}" />
+                        
+                            <g:sortableColumn property="currentLatitude" title="${message(code: 'positionDevice.currentLatitude.label', default: 'Current Latitude')}" />
+                        
                             <g:sortableColumn property="idExternal" title="${message(code: 'positionDevice.idExternal.label', default: 'Id External')}" />
                         
                             <th><g:message code="positionDevice.owner.label" default="Owner" /></th>
@@ -39,6 +43,10 @@
                             <td><g:link action="show" id="${positionDeviceInstance.id}">${fieldValue(bean: positionDeviceInstance, field: "id")}</g:link></td>
                         
                             <td>${fieldValue(bean: positionDeviceInstance, field: "description")}</td>
+                        
+                            <td>${fieldValue(bean: positionDeviceInstance, field: "currentLongitude")}</td>
+                        
+                            <td>${fieldValue(bean: positionDeviceInstance, field: "currentLatitude")}</td>
                         
                             <td>${fieldValue(bean: positionDeviceInstance, field: "idExternal")}</td>
                         

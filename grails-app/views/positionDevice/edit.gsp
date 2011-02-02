@@ -42,6 +42,24 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                  <label for="currentLongitude"><g:message code="positionDevice.currentLongitude.label" default="Current Longitude" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: positionDeviceInstance, field: 'currentLongitude', 'errors')}">
+                                    <g:textField name="currentLongitude" value="${fieldValue(bean: positionDeviceInstance, field: 'currentLongitude')}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="currentLatitude"><g:message code="positionDevice.currentLatitude.label" default="Current Latitude" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: positionDeviceInstance, field: 'currentLatitude', 'errors')}">
+                                    <g:textField name="currentLatitude" value="${fieldValue(bean: positionDeviceInstance, field: 'currentLatitude')}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                   <label for="idExternal"><g:message code="positionDevice.idExternal.label" default="Id External" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: positionDeviceInstance, field: 'idExternal', 'errors')}">
