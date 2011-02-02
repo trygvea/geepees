@@ -24,11 +24,9 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'reportLog.id.label', default: 'Id')}" />
                         
-                            <th><g:message code="reportLog.subscriber.label" default="Subscriber" /></th>
-                        
                             <g:sortableColumn property="what" title="${message(code: 'reportLog.what.label', default: 'What')}" />
                         
-                            <g:sortableColumn property="when" title="${message(code: 'reportLog.when.label', default: 'When')}" />
+                            <g:sortableColumn property="whenReported" title="${message(code: 'reportLog.whenReported.label', default: 'When Reported')}" />
                         
                         </tr>
                     </thead>
@@ -38,11 +36,9 @@
                         
                             <td><g:link action="show" id="${reportLogInstance.id}">${fieldValue(bean: reportLogInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: reportLogInstance, field: "subscriber")}</td>
-                        
                             <td>${fieldValue(bean: reportLogInstance, field: "what")}</td>
                         
-                            <td><g:formatDate date="${reportLogInstance.when}" /></td>
+                            <td><g:formatDate date="${reportLogInstance.whenReported}" /></td>
                         
                         </tr>
                     </g:each>

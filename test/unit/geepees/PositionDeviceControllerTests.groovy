@@ -1,5 +1,3 @@
-package geepees
-
 import grails.test.*
 
 class PositionDeviceControllerTests extends ControllerUnitTestCase {

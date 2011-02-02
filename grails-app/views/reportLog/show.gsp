@@ -30,13 +30,6 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="reportLog.subscriber.label" default="Subscriber" /></td>
-                            
-                            <td valign="top" class="value"><g:link controller="positionSubscriber" action="show" id="${reportLogInstance?.subscriber?.id}">${reportLogInstance?.subscriber?.encodeAsHTML()}</g:link></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="reportLog.what.label" default="What" /></td>
                             
                             <td valign="top" class="value">${fieldValue(bean: reportLogInstance, field: "what")}</td>
@@ -44,9 +37,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="reportLog.when.label" default="When" /></td>
+                            <td valign="top" class="name"><g:message code="reportLog.whenReported.label" default="When Reported" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${reportLogInstance?.when}" /></td>
+                            <td valign="top" class="value"><g:formatDate date="${reportLogInstance?.whenReported}" /></td>
                             
                         </tr>
                     

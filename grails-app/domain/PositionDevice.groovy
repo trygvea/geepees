@@ -7,7 +7,5 @@ class PositionDevice {
     
     static constraints = {
         description(nullable:true)
-        currentLongitude(nullable:true)
-        currentLatitude(nullable:true)
     }
 }

@@ -30,15 +30,6 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="subscriber"><g:message code="reportLog.subscriber.label" default="Subscriber" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: reportLogInstance, field: 'subscriber', 'errors')}">
-                                    <g:select name="subscriber.id" from="${PositionSubscriber.list()}" optionKey="id" value="${reportLogInstance?.subscriber?.id}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
                                     <label for="what"><g:message code="reportLog.what.label" default="What" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: reportLogInstance, field: 'what', 'errors')}">
@@ -48,10 +39,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="when"><g:message code="reportLog.when.label" default="When" /></label>
+                                    <label for="whenReported"><g:message code="reportLog.whenReported.label" default="When Reported" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: reportLogInstance, field: 'when', 'errors')}">
-                                    <g:datePicker name="when" precision="day" value="${reportLogInstance?.when}"  />
+                                <td valign="top" class="value ${hasErrors(bean: reportLogInstance, field: 'whenReported', 'errors')}">
+                                    <g:datePicker name="whenReported" precision="day" value="${reportLogInstance?.whenReported}"  />
                                 </td>
                             </tr>
                         

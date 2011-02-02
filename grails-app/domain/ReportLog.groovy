@@ -1,5 +1,4 @@
 class ReportLog {
-    Date when
-    PositionSubscriber subscriber
+    Date whenReported
     String what
 }
